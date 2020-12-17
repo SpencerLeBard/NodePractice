@@ -2,7 +2,7 @@ const express = require('express');
 
 const server = express();
 
-//NOTE express gives us more advanced features, custom logic for http modules
+//NOTE express gives more advanced features, custom logic for http modules
 
 server.get('/' , (req, res) => {
   res.send('Hello Express')

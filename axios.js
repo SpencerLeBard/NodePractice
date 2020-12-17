@@ -1,9 +1,23 @@
 const axios = require('axios');
 
-axios.get('http://www.google.com')
+axios.post('login' , {
+    firstName: 'Spencer' ,
+    lastName: 'LeBard'
+})
 .then((responce) => {
   console.log(responce);
-})
-.catch((error) => {
-  console.error(error);
-});
+} , (error) => {
+  console.log(error);
+}
+)
+
+
+
+
+// axios.get('http://www.google.com')
+// .then((responce) => {
+//   console.log(responce);
+// })
+// .catch((error) => {
+//   console.error(error);
+// });

@@ -12,8 +12,6 @@ axios.post('login' , {
 )
 
 
-
-
 // axios.get('http://www.google.com')
 // .then((responce) => {
 //   console.log(responce);

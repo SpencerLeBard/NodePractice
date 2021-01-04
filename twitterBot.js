@@ -7,3 +7,5 @@ var T = new Twit({
   access_token_secret: '...'
 
 })
+
+//note get developer account from twitter

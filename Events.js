@@ -1,13 +1,13 @@
-var events = require('events');
-var eventEmitter = new events.EventEmitter(); 
+//class
+var EventEmitter = require('events');
+//object
+var emitter = new EventEmitter(); 
 
-//Create an event handler:
-var myEventHandler = function () {
-  console.log('I hear a scream!');
-}
+//register listener
+emitter.on('message logged' , function(){
+  console.log('Listener called');
+});
 
-//Assign the event handler to an event:
-eventEmitter.on('scream', myEventHandler);
+//Raise an event
+emitter.emit('message logged')
 
-//Fire the 'scream' event:
-eventEmitter.emit('scream');

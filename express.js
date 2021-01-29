@@ -1,5 +1,4 @@
 const express = require('express');
-
 const server = express();
 
 //NOTE express gives more advanced features, custom logic for http modules

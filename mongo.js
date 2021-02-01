@@ -16,15 +16,18 @@ async function main(){
   assert.strictEqual(data.length , results.insertedCount)
   
   const getData = await circulationRepo.get();
-  assert.strictEqual(data.length , getData.length);
-  
-  } catch(error) {
-  } finally{
+
+  const filterData = await circulationRepo.get({NewsPaper: getData[4].NewsPaper});
+  const limitData = await circulationRepo.get({}, 3)
+
+} catch(error) {
+    console.log(error);
+  } finally {
   const admin = client.db(dbName).admin();
 
   //NOTE be careful with dropdatabase
   await client.db(dbName).dropDatabase();
-  console.log(await admin.listDatabases());
+  // console.log(await admin.listDatabases());
   client.close();
   }
 }

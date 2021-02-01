@@ -34,3 +34,22 @@ async function main(){
 
 
 main();
+
+
+//NOTE general flow:
+// mongo client = require mongo client
+// require repo
+// url = localhost or whatever
+// async function main, client = new MongoClient(url)
+// await client.connect()
+// try const results = await repo.loadData(data)
+// NOTE new jsfile repo
+// loadData() , retutn new promise(async(resolve , reject) => { const client = new MonGoClient(url)})
+// try client.connect
+// const db = client.db(dbName)
+// results = await db.collection('newspapers').insertMany(data)
+//retrun (from load data) {loadData , get}
+//get similar except use .find(query)
+//NOTE back to mongo.js
+// const getData = await repo.get();
+// another example would be 'await db.repo/collection.get({Newspapers: getData.NewsPapers})'

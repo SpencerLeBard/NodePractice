@@ -7,10 +7,9 @@ const dbName = 'cirrculation';
 
 
 
-async function main(){  const client = new MongoClient(url);
-
+async function main(){
+  const client = new MongoClient(url);
   await client.connect();
-
   try{
   const results = await circulationRepo.loadData(data);
   assert.strictEqual(data.length , results.insertedCount)

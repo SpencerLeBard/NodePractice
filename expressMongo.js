@@ -3,6 +3,19 @@ var app = express();
 const bookRouter = express.Router();
 var port = process.env.PORT || 3000;
 
+
+app.get('/' , (req , res) =>{
+  res.send('WELCOME TO THE JUNGLE')
+});
+
+app.listen(port , () => {
+console.log('Running on port ' + port);
+});
+
+app.use('/api' , bookRouter);
+
+
+
 bookRouter.route('/books').get((req , res) =>{
 //NOTE if query did not have hits 
   const query = {};
@@ -27,15 +40,7 @@ bookRouter.route('/books/:bookId').get((req , res) =>{
   });
 });
 
-app.use('/api' , bookRouter);
 
-app.get('/' , (req , res) =>{
-    res.send('WELCOME TO THE JUNGLE')
-});
-
-app.listen(port , () => {
-  console.log('Running on port ' + port);
-});
 
 
 

@@ -6,10 +6,11 @@ server.get('/' , (req , res) =>{
   res.send("nihao")
   console.log("nihao");
 })
-
 server.listen(port , () => {
   console.log("listening on port " + port);
 })
+
+
 
 var collection = [
   { "_id": 1, "name": "apples", "qty": 5, "rating": 3 },

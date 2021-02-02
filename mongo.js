@@ -7,8 +7,8 @@ const dbName = 'cirrculation';
 
 
 
-async function main(){
-  const client = new MongoClient(url);
+async function main(){  const client = new MongoClient(url);
+
   await client.connect();
 
   try{

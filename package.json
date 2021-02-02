@@ -9,10 +9,14 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
+    "nodemon": "^2.0.7",
     "services": "^0.0.3",
     "twit": "^2.2.11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "elint": "^2.0.1",
+    "eslint": "^7.19.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

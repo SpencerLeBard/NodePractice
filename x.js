@@ -37,15 +37,17 @@ await collection.find({}).sort({length: -1}).forEach(console.dir);
 // OR add .limit(3) before sort ... OR .skip(3) after
 
 //NOTE delete 
+const doc = {
+  pageViews: {
+    $gt: 10,
+    $lt: 32768 }};
+const deleteResult = await collection.deleteOne(doc)
+console.log(deleteResult);
 
+// NOTE change/put
+// $set - replaces the value of a field with a specified one
+// $inc - increments or decrements field values
+// $rename - renames fields
+// $unset - removes fields
+// $mul - multiplies a field value by a specified number
 
-
-
-
-async function findAnimals(){
-var results = await collection('animals').find({
-  Animal: "pig"
-});
-console.log(results);
-}
-findAnimals();
